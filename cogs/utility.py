@@ -168,12 +168,26 @@ class UtilityCog(commands.Cog, name="Utility"):
         embed.add_field(
             name="🎲 Fun & Games",
             value=(
+                "`/trivia` - Play interactive multiple-choice trivia with buttons\n"
                 "`/rps` - Play Rock Paper Scissors with clickable buttons\n"
+                "`/ship <user1> [user2]` - Love compatibility meter & progress bar\n"
                 "`/roll [dice]` - Roll dice (e.g., `1d6`, `2d20`, `1d100`)\n"
                 "`/coinflip` - Flip a coin (Heads or Tails)\n"
                 "`/8ball <question>` - Ask the Magic 8-Ball for an answer\n"
-                "`/joke [category]` - Funny joke (Programming, Dad Jokes, Gaming, General)\n"
-                "`/choose <options>` - Pick randomly between choices (`Pizza, Tacos, Burgers`)"
+                "`/joke [category]` - 50+ funny jokes (Programming, Dad, Gaming)\n"
+                "`/choose <options>` - Pick randomly between choices\n"
+                "`/hug <user>` & `/slap <user>` - Social actions"
+            ),
+            inline=False,
+        )
+
+        embed.add_field(
+            name="📢 Server Administration",
+            value=(
+                "`/announce <channel> <msg> [title]` - Broadcast formatted announcement\n"
+                "`/roleinfo <role>` - Inspect permissions, color & member count\n"
+                "`/membercount` - Detailed server member statistics\n"
+                "`/say <message> [channel]` - Send a bot message"
             ),
             inline=False,
         )
@@ -188,6 +202,28 @@ class UtilityCog(commands.Cog, name="Utility"):
                 "`/lock [reason]` & `/unlock` - Lock down or unlock a channel\n"
                 "`/kick <user> [reason]` - Kick a member with hierarchy check\n"
                 "`/ban <user> [reason]` - Ban a member with message purge"
+            ),
+            inline=False,
+        )
+
+        embed.add_field(
+            name="🪙 Economy & Coins",
+            value=(
+                "`/daily` - Claim daily coin reward & streak bonus\n"
+                "`/balance [user]` - Check wallet, bank & net worth\n"
+                "`/beg` - Beg for coins with random scenarios\n"
+                "`/slots <bet>` - Bet coins on virtual slot machine\n"
+                "`/pay <user> <amount>` - Transfer coins to someone\n"
+                "`/leaderboard` - Server wealth rankings"
+            ),
+            inline=False,
+        )
+
+        embed.add_field(
+            name="🎁 Giveaways",
+            value=(
+                "`/giveaway <time> <prize> [win]` - Host interactive button giveaway\n"
+                "`/reroll <message_id>` - Draw a new winner for an ended giveaway"
             ),
             inline=False,
         )
